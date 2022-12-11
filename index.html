@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Simple Sidebar Menu</title>
+  
+</head>
+ 
+<body>
+    <style>
+
+    
+    
+        #sidebar{
+            position: fixed; 
+            top: 0px; 
+            left: -200px;
+            width: 200px; 
+            height: 100%; 
+            background-color:  rgb(248, 47, 81);
+            transition: left 500ms linear;
+        }
+        #sidebar.active 
+        {
+            left: 0px; 
+        }
+        #sidebar  .links a
+        {
+            display: block; 
+            padding: 10px; 
+            color:rgb(247, 247, 247); 
+            text-decoration: none;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 22px; 
+            border-bottom: 3px solid rgb(251, 251, 251);
+        }
+        #sidebar #sidebar-toggle-btn {
+            position: absolute;
+            width: 35px; 
+            height: 35px; 
+            top: 10px; 
+            right: -50px; 
+            cursor: pointer;
+        }
+        #sidebar #sidebar-toggle-btn span {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            width: 100%; 
+            height: 5px; 
+            background : rgb(248, 47, 81); 
+        }
+        #sidebar #sidebar-toggle-btn span:nth-child(1)
+        {
+            top:10%; 
+        }
+        #sidebar #sidebar-toggle-btn span:nth-child(3)
+        {
+            top:90%; 
+        }
+
+        .text h3
+        {
+
+         position: absolute;
+         left: 285px;
+         top: 300px;
+         font-size: 100px;
+         font-weight: 900;
+         color:  rgba(255, 255, 255, 0.575);
+         line-height: 1em;
+         text-transform: uppercase;
+           
+        }
+
+        .fullscreen video
+        {
+  
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.95;
+        } 
+
+        
+
+
+    </style>
+
+
+
+    <div class="fullscreen">
+        <video src= "video/Ice Cream Commercial _ SHOT AT HOME! _ Sony a7iii (online-video-cutter.com).mp4"
+         muted loop autoplay></video> 
+      </div>
+      <div class="text">
+        <h3>Melt into happiness</h3>
+        </div>
+<div id="sidebar">
+    <div id="sidebar-toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class ="links">
+        <a href = "new.html"target="_blank">Home</a>
+        <a href = "#">Find a shop</a>
+        <a href = "#">About us</a>
+        <a href = "#">Contact</a>
+
+    </div>
+
+<script> document.getElementById("sidebar-toggle-btn").addEventListener("click",function() {
+    document.getElementById("sidebar").classList.toggle("active"); 
+})</script>
+
+
+</body>
+   
+</html>
+
